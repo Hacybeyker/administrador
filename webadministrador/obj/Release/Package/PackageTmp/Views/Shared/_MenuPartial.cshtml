@@ -1,0 +1,36 @@
+﻿@model Modelo.c3_dominio.entidad.servicios.ContactoServicio
+<ul class="sidebar-menu">
+    <li class="header">NAVEGACIÓN PRINCIPAL</li>
+    <li>
+        <a href="@Url.Action("Index", "Categoria")">
+            <i class="fa fa-folder"></i> <span>Familia<small class="label pull-right bg-blue">@Model.cantidadCategoria()</small></span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <i class="fa fa-edit"></i> <span>Sub Familia</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <i class="fa fa-book"></i> <span>Linea Sub Familia</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <i class="fa fa-pie-chart"></i> <span>Productos</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <i class="fa fa-user"></i> <span>Usuarios</span>
+        </a>
+    </li>
+    <li>
+        <a href="@Url.Action("Index", "Home")">
+            <i class="fa fa-envelope"></i> <span>Mensajes<small class="label pull-right bg-yellow">@Model.cantidadMensaje()</small></span>
+        </a>
+    </li>
+</ul>
+
+

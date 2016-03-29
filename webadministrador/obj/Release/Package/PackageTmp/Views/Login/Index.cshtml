@@ -1,0 +1,35 @@
+﻿@model Modelo.c3_dominio.entidad.servicios.ContactoServicio
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Autenticación para Administrar</h2>
+
+<div>
+    @using (Html.BeginForm("Crear", "Login", FormMethod.Post))
+            {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="Nombre">Usuario</label>
+                    @Html.TextBoxFor(model=>Model.Usuario.cuentaUsuario, new {@class = "form-control" })
+                    @Html.ValidationMessageFor(model=>Model.Usuario.cuentaUsuario)
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="Apellidos">Password</label>
+                    @Html.PasswordFor(model => Model.Usuario.claveUsuario, new { @class = "form-control"})
+                    @Html.ValidationMessageFor(model => Model.Usuario.claveUsuario)
+                </div>
+            </div>
+
+            <div class="col-sm-12 text-center">
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+            </div>
+        </div>
+    }
+</div>
